@@ -17,10 +17,11 @@ if [ -d "$proj_dir" ]; then
     # can i be #1?
     cd $HOME/439/$proj_name
     touch spamon
-    for file in t0*; do cp "$file" "goppert${file:2}"; done
+    for file in t0*; do cp -r "$file" "goppert${file:2}"; done
     git add . && git commit -m "spamon" && git push
     exit 0
 else
     # :/
     echo "ERR: FAILED TO FIND CLONED PROJECT"
+    exit 1
 fi
