@@ -13,6 +13,6 @@ do
         exit 0
     else
         echo "FAILED; TRYING AGAIN"
-        sleep 5s
+        sleep 1s
     fi
 done
