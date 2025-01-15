@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ "$#" -ne 0 ]; then
+    echo "Usage: fetch-goto-sp"
+    exit 1
+fi
+
+# vars
+projs_str="1234567"
+len=${#projs_str}
+
+# loop 'n check
+for (( i=$len-1; i>=0; i-- )); do
+    proj_num="${projs_str:$i:1}"
+    target_dir="${HOME}/378/p${proj_num}"
+    if [ -d "$target_dir" ]; then 
+        echo $target_dir
+        exit 0
+    fi
+done
