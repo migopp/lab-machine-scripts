@@ -12,7 +12,7 @@ len=${#projs_str}
 # loop 'n check
 for (( i=$len-1; i>=0; i-- )); do
     proj_num="${projs_str:$i:1}"
-    target_dir="${HOME}/s25-439/cs439_s25_p${proj_num}_goppert"
+    target_dir="${HOME}/cs439_s25/cs439_s25_p${proj_num}_goppert"
     if [ -d "$target_dir" ]; then 
         echo $target_dir
         exit 0
